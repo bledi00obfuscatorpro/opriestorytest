@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vittel Hub - Roblox Script Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo-link">
+        <span class="logo-text">Vittel Hub</span>
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#scripts">Scripts</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero reveal-section" id="hero">
+      <div class="hero-bottle reveal-item">
+        <img src="assets/wallpaper.png" alt="" width="160" height="360">
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title reveal-item">Hello user welcome to Vittel scripthub!</h1>
+        <p class="hero-desc reveal-item">Vittel hub has one of the best scripts out there! all developed by Bledi.</p>
+        <div class="hero-buttons reveal-item">
+          <a href="#scripts" class="btn btn-primary">Browse scripts</a>
+          <a href="#how-it-works" class="btn btn-secondary">How to inject</a>
+        </div>
+        <div class="hero-badges reveal-item">
+          <span class="badge">Updated detection</span>
+          <span class="badge">Lua</span>
+          <span class="badge badge-status">Undetected</span>
+        </div>
+        <p class="hero-disclaimer reveal-item">Status may change with Roblox updates. Use at your own risk.</p>
+        <div class="code-block-wrap reveal-item">
+          <span class="code-filename">example.lua</span>
+          <button type="button" class="code-copy" aria-label="Copy code">Copy</button>
+          <pre class="code-block"><code>-- Vittel Hub
+local HttpService = game:GetService("HttpService")
+local url = "https://your-hub-endpoint.example/load?game=" .. game.PlaceId
+
+local ok, scriptSource = pcall(function()
+    return HttpService:GetAsync(url)
+end)
+
+if ok then
+    loadstring(scriptSource)()
+else
+    warn("[Vittel] Failed to fetch script:", scriptSource)
+end</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section reveal-section">
+      <div class="section-inner">
+        <h2 class="section-title reveal-item">Why use Vittel Hub?</h2>
+        <p class="section-lead reveal-item">For casual players and power-users who want reliable Roblox scripts — no sketchy paste sites and no pop ups..</p>
+        <div class="feature-grid">
+          <div class="feature-card reveal-item">
+            <h3 class="feature-title">Curated scripts</h3>
+            <p>Hand-picked Lua with clear comments, by game, category and risk level. You always know what you're running.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3 class="feature-title">One-line loader</h3>
+            <p>One loader line in your exploit — the hub fetches the latest version automatically.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3 class="feature-title">Performance focused</h3>
+            <p>Optimized loops, debounced events, memory-friendly. Keeps FPS high in many players servers.</p>
+          </div>
+          <div class="feature-card reveal-item">
+            <h3 class="feature-title">Open structure</h3>
+            <p>Clear file structure and naming so you can learn Lua by reading, not just running (not really frfr).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scripts" class="section section-dark reveal-section">
+      <div class="section-inner">
+        <h2 class="section-title reveal-item">Popular script presets</h2>
+        <p class="section-lead reveal-item">Aimbots, ESP, QoL, grind automation — ready to copy and run.</p>
+        <div class="preset-grid">
+          <div class="preset-card reveal-item">
+            <span class="preset-cat">Combat</span>
+            <h3 class="preset-title">Coming soon</h3>
+            <pre class="code-block small"><code>-- loader (example)</code></pre>
+          </div>
+          <div class="preset-card reveal-item">
+            <span class="preset-cat">QoL</span>
+            <h3 class="preset-title">FireWorks PlayGrounds</h3>
+            <p class="preset-desc">Server hopping, claims every chest. Copy the script below.</p>
+            <pre class="code-block small"><code>loadstring(game:HttpGet("https://pastefy.app/532l3YWV"))()</code></pre>
+          </div>
+          <div class="preset-card reveal-item">
+            <span class="preset-cat">Farming</span>
+            <h3 class="preset-title">TSB script</h3>
+            <p class="preset-desc">Famous script by the Vittel team — auto tech. Copy below.</p>
+            <pre class="code-block small"><code>loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()"))()</code></pre>
+          </div>
+        </div>
+        <p class="section-note reveal-item">Concept examples. Swap URLs for your own hosting or GitHub raw when you go live.</p>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section reveal-section">
+      <div class="section-inner">
+        <h2 class="section-title reveal-item">How to use the hub</h2>
+        <p class="section-lead reveal-item">Connect your Roblox client to Vittel in four steps.</p>
+        <div class="steps">
+          <div class="step reveal-item">
+            <span class="step-num">1</span>
+            <div class="step-content">
+              <h3 class="step-title">Install a trusted executor</h3>
+              <p>Use a reputable Roblox Lua executor. No random YouTube downloads — scan files, use official sites.</p>
+            </div>
+          </div>
+          <div class="step reveal-item">
+            <span class="step-num">2</span>
+            <div class="step-content">
+              <h3 class="step-title">Paste the loader</h3>
+              <p>Copy the hub loader line into your executor, attach to Roblox, then go in-game.</p>
+              <pre class="code-block small"><code>loadstring(game:HttpGet("https://Vittel.example/loader.lua"))()</code></pre>
+            </div>
+          </div>
+          <div class="step reveal-item">
+            <span class="step-num">3</span>
+            <div class="step-content">
+              <h3 class="step-title">Pick a game profile</h3>
+              <p>In the hub UI, select the game (auto-detect is best), choose features, enable safely.</p>
+            </div>
+          </div>
+          <div class="step reveal-item">
+            <span class="step-num">4</span>
+            <div class="step-content">
+              <h3 class="step-title">Stay updated</h3>
+              <p>When Roblox patches, push new Lua to your hosting. Same loader URL means users always get latest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section section-dark reveal-section">
+      <div class="section-inner">
+        <h2 class="section-title reveal-item">FAQ & Safety</h2>
+        <p class="section-lead reveal-item">No hub is 100% safe. Be transparent; understand the risks.</p>
+        <div class="faq-list">
+          <div class="faq-item reveal-item">
+            <h3 class="faq-q">Is using a script hub bannable?</h3>
+            <p class="faq-a">Exploiting can violate Roblox ToS. "Undetected" means not caught yet. Risk of warnings, kicks, or bans.</p>
+          </div>
+          <div class="faq-item reveal-item">
+            <h3 class="faq-q">Where should I host my scripts?</h3>
+            <p class="faq-a">Trusted CDNs or Git (e.g. GitHub raw). Avoid sketchy free hosts with popups or bundled malware.</p>
+          </div>
+          <div class="faq-item reveal-item">
+            <h3 class="faq-q">More coming soon</h3>
+            <p class="faq-a">We're adding more scripts and features. Stay tuned.</p>
+          </div>
+          <div class="faq-item reveal-item">
+            <h3 class="faq-q">Do you provide real scripts?</h3>
+            <p class="faq-a">Yes — real scripts, tested and ready to use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer reveal-section">
+    <div class="footer-inner">
+      <p class="footer-brand reveal-item">Vittel Hub</p>
+      <p class="footer-credit reveal-item">Made by Bledi / Vittel</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
